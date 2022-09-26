@@ -1,0 +1,118 @@
+:root {
+  --darkBlue: #153243;
+  --lightBlue: #1098f7;
+  --red: #cd5334;
+  --lightYellow: #eee3ab;
+  --darkWhite: #d9cfc1;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+* a {
+  text-decoration: none;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--darkWhite);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+nav {
+  display: flex;
+  width: 90%;
+  height: 6vh;
+  align-items: center;
+}
+.nav-links {
+  display: flex;
+  margin-left: auto;
+  width: 30%;
+  justify-content: space-between;
+}
+.nav-links li {
+  list-style: none;
+  margin-left: 10px;
+  font-size: 1.2rem;
+}
+.logo h1 {
+  font-size: 2rem;
+  color: #153243;
+}
+.nav-links li a {
+  color: rgb(22, 22, 22);
+}
+main {
+  width: 100%;
+  height: 94vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.quiz-box {
+  background: var(--darkBlue);
+  width: 50%;
+  max-width: 700px;
+  height: 50%;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 25px 40px;
+  color: white;
+  justify-content: space-around;
+}
+.options {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  font-size: 1.5rem;
+}
+.options > div {
+  padding: 15px 0;
+}
+.options > div > .radio {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.question {
+  margin-bottom: 20px;
+}
+.btn {
+  width: 150px;
+  height: 40px;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+#check {
+  background: transparent;
+  border: 2px solid var(--lightYellow);
+  color: var(--lightYellow);
+  margin-right: 20px;
+  transition: all 0.5s;
+}
+#check:hover {
+  background: var(--lightYellow);
+  color: var(--darkBlue);
+}
+#check:active {
+  background: transparent;
+  color: var(--lightYellow);
+}
+#next {
+  background: var(--lightBlue);
+  color: white;
+  transition: all 0.5s;
+}
+#next:hover {
+  background: rgb(18, 66, 196);
+}
+#next:active {
+  background: var(--lightBlue);
+}
