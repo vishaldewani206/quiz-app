@@ -1,7 +1,9 @@
 let question = document.querySelector('#question');
 let choices = document.querySelectorAll('.radio');
 let next = document.querySelector('#next');
+let checkBtn = document.querySelector('#check');
 let label = document.querySelectorAll('.label');
+let checkQuestion = document.querySelector('#checkQuestion');
 let allQuestion = [
   'which one is not operating system',
   'which one is not git command ',
@@ -23,7 +25,7 @@ let options = [
 ];
 
 let rightAnswer = [3, 2, 4, 1, 2, 2];
-console.log(choices);
+
 let a = 0;
 //onclick next button
 next.addEventListener('click', () => {
@@ -50,8 +52,29 @@ next.addEventListener('click', () => {
           }
         }
         question.innerHTML = allQuestion[a];
+        checkQuestion.innerHTML = '';
         a++;
         console.log(`a = ${a}`);
+      }
+    }
+  }
+});
+
+//check btn
+checkBtn.addEventListener('click', () => {
+  //allquestions
+  for (let i = 0; i < 4; i++) {
+    //check if any radio is clicked
+    if (choices[i].checked) {
+      //checking if it's right answer
+      if (i == rightAnswer[a] - 1) {
+        checkQuestion.innerHTML = 'Right';
+        checkQuestion.style.color = 'green';
+        console.log('it is right');
+      } else {
+        checkQuestion.innerHTML = 'Wrong';
+        checkQuestion.style.color = 'red';
+        console.log('fuck you');
       }
     }
   }
