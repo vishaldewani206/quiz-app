@@ -29,8 +29,6 @@ let rightAnswer = [3, 2, 4, 1, 2, 2];
 let a = 0;
 //onclick next button
 next.addEventListener('click', () => {
-  console.log(allQuestion.length);
-  console.log(rightAnswer.length);
   //allquestions
   for (let i = 0; i < allQuestion.length - 1; i++) {
     //check if any radio is clicked
@@ -55,6 +53,9 @@ next.addEventListener('click', () => {
         checkQuestion.innerHTML = '';
         a++;
         console.log(`a = ${a}`);
+      } else {
+        checkQuestion.innerHTML = 'Wrong';
+        checkQuestion.style.color = 'red';
       }
     }
   }
