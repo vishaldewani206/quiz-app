@@ -9,7 +9,7 @@ let allQuestion = [
   'which one is not git command ',
   'what is full form of html',
   'what is css stands for',
-  'where is minar-e-pakistan',
+  'In a computer, most processing takes place in _______?',
 ];
 let options = [
   ['Windows', 'computer', 'Mac', 'Linux'],
@@ -21,7 +21,7 @@ let options = [
     'nothing',
     'hyper text markup language',
   ],
-  ['karachi', 'lahore', 'hyderabad', 'mithis'],
+  ['mouse', 'monitor', 'CPU', 'LCD'],
 ];
 
 let rightAnswer = [3, 2, 4, 1, 2, 2];
@@ -79,12 +79,4 @@ checkBtn.addEventListener('click', () => {
       }
     }
   }
-});
-
-//Hamburger
-let hamburger = document.querySelector('.hamburger');
-let navLinks = document.querySelector('.nav-links');
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  navLinks.classList.toggle('nav-active');
 });
